@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StudentController!{% endblock %}
+
+{% block content %}
+<div class="example-wrapper">
+    {{ student.firstName }} {{ student.lastName }} : {{ student.birthdate | date('Y/m/d') }}
+</div>
+{% endblock %}

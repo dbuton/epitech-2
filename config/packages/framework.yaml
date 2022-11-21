@@ -17,6 +17,18 @@ framework:
     php_errors:
         log: true
 
+    form:
+        legacy_error_messages: false
+
+
+parameters:
+    illustration_directory: '%kernel.project_dir%/public/uploads'
+
+services:
+    App\Service\ManageIllustrationService:
+        arguments:
+            $targetDirectory: '%illustration_directory%'
+
 when@test:
     framework:
         test: true

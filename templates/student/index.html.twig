@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StudentController!{% endblock %}
+
+{% block content %}
+<div class="example-wrapper">
+    <ul>
+        {% for student in students %}
+            <li>
+                <a href="{{ path('app_student_display', { 'id' : student.id }) }}">
+                    {{ student.firstName }} {{ student.lastName }} : {{ student.birthdate | date('Y/m/d') }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

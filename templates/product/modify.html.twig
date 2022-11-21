@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.name }} - La Boutique {% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        {{ form_start(form, {'action': path('product_modify', { 'slug' : product.slug }), 'method': 'POST'}) }}
+        {{ form(form) }}
+        {{ form_end(form) }}
+    </div>
+    <hr>
+
+{% endblock %}
